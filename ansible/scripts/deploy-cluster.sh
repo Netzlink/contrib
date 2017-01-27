@@ -17,4 +17,5 @@
 . ./init.sh
 
 inventory=${INVENTORY:-${INVENTORY_DIR}/inventory}
-ansible_playbook ${inventory} ${PLAYBOOKS_DIR}/deploy-cluster.yml "$@"
+#ansible_playbook ${inventory} ${PLAYBOOKS_DIR}/deploy-cluster.yml "$@"
+ansible-playbook ${PLAYBOOKS_DIR}/deploy-cluster.yml -i ../inventory/openstack.py --private-key=ansible-master.pem

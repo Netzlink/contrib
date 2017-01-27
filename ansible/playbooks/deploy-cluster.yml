@@ -4,6 +4,8 @@
 
 - hosts: all
   gather_facts: false
+  vars_files:
+    - ../inventory/group_vars/all.yml
   become: yes
   roles:
     - pre-ansible
